@@ -1,0 +1,93 @@
+# Dependencies
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+out/
+.next/
+*.tsbuildinfo
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.editorconfig
+
+# Agent & Instruction Files (local customizations)
+.github/agents/
+.github/instructions/
+.claude/
+.agents/
+*.instructions.md
+*.prompt.md
+*.agent.md
+copilot-instructions.md
+
+# Testing
+coverage/
+test-results/
+.nyc_output/
+
+# Logs
+logs/
+*.log
+yarn-error.log*
+npm-error.log*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+.temp/
+tmp/
+
+# Asset optimization
+/assets/originals/
+/assets/*.psd
+/assets/*.ai
+
+# Local development
+.local/
+local.env
+
+# Caches
+.cache/
+.eslintcache
+.stylelintcache
+
+# Vim
+.vim/
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+Session.vim
+.netrwhist
+
+# Misc
+.vscode-settings.json
+.history/
+*.rej

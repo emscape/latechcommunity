@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Volunteer with LA Tech Community. Tell us how you want to help and how to contact you.">
+    <meta name="author" content="LA Tech Community">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2300BFFF' stroke='%231A3A52' stroke-width='2'/%3E%3Cg stroke='%231A3A52' stroke-width='3' fill='none' stroke-linecap='round'%3E%3Cpath d='M 18 16 L 12 32 L 18 48'/%3E%3C/g%3E%3Cg stroke='%23FF9900' stroke-width='3' fill='none' stroke-linecap='round'%3E%3Cpath d='M 46 16 L 52 32 L 46 48'/%3E%3C/g%3E%3Ctext x='32' y='37' font-family='Arial, sans-serif' font-size='18' font-weight='bold' text-anchor='middle' fill='%231A3A52'%3ELA%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+
+    <title>Volunteer | LA Tech Community</title>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <nav class="header__nav" role="navigation" aria-label="Primary Navigation">
+            <div class="header__container">
+                <a href="index.html" class="header__logo">
+                    <span class="header__logo-text">LA <span class="header__logo-accent">tech</span> community</span>
+                </a>
+                <ul class="nav__menu">
+                    <li><a href="index.html#mission" class="nav__link">Mission</a></li>
+                    <li><a href="index.html#values" class="nav__link">What We Do</a></li>
+                    <li><a href="index.html#events" class="nav__link">Events</a></li>
+                    <li><a href="index.html#community" class="nav__link">Community</a></li>
+                    <li><a href="volunteer.html" class="nav__link" aria-current="page">Volunteer</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="section section--light-bg" aria-labelledby="volunteer-title">
+            <div class="section__container">
+                <h1 id="volunteer-title" class="section__title">Volunteer With LA Tech Community</h1>
+                <p class="section__description">
+                    Tell us how you would like to help and how to reach you. We will review your submission and follow up.
+                </p>
+                <article class="card card--primary volunteer__form-card">
+                    <form class="volunteer__form" action="https://formspree.io/f/myknyljp" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
+                        <input type="hidden" name="_subject" value="New Volunteer Interest Form - LA Tech Community">
+
+                        <fieldset class="form-group volunteer__fieldset">
+                            <legend class="section__heading">How Would You Like to Help?</legend>
+
+                            <label class="form-group__label volunteer__checkbox" for="help-events">
+                                <input id="help-events" type="checkbox" name="Ways to Help" value="Event Planning">
+                                Event Planning
+                            </label>
+                            <label class="form-group__label volunteer__checkbox" for="help-mentoring">
+                                <input id="help-mentoring" type="checkbox" name="Ways to Help" value="Mentoring">
+                                Mentoring
+                            </label>
+                            <label class="form-group__label volunteer__checkbox" for="help-speaking">
+                                <input id="help-speaking" type="checkbox" name="Ways to Help" value="Speaking or Teaching">
+                                Speaking or Teaching
+                            </label>
+                            <label class="form-group__label volunteer__checkbox" for="help-outreach">
+                                <input id="help-outreach" type="checkbox" name="Ways to Help" value="Community Outreach">
+                                Community Outreach
+                            </label>
+                            <label class="form-group__label volunteer__checkbox" for="help-sponsorship">
+                                <input id="help-sponsorship" type="checkbox" name="Ways to Help" value="Sponsorship Support">
+                                Sponsorship Support
+                            </label>
+                            <label class="form-group__label" for="help-other">Other Ways You'd Like to Help</label>
+                            <textarea id="help-other" name="Other Ways to Help" class="form-group__textarea" rows="4" placeholder="Tell us what you are interested in..."></textarea>
+                        </fieldset>
+
+                        <fieldset class="form-group volunteer__fieldset">
+                            <legend class="section__heading">Contact Information</legend>
+
+                            <label class="form-group__label form-group__label--required" for="name">Full Name</label>
+                            <input id="name" name="Full Name" class="form-group__input" type="text" required>
+
+                            <label class="form-group__label form-group__label--required" for="email">Email Address</label>
+                            <input id="email" name="Email Address" class="form-group__input" type="email" required>
+
+                            <label class="form-group__label" for="phone">Phone Number (Optional)</label>
+                            <input id="phone" name="Phone" class="form-group__input" type="tel">
+
+                            <label class="form-group__label" for="location">Neighborhood / City (Optional)</label>
+                            <input id="location" name="Location" class="form-group__input" type="text">
+
+                            <label class="form-group__label" for="availability">Availability</label>
+                            <select id="availability" name="Availability" class="form-group__select">
+                                <option value="">Select an option</option>
+                                <option value="Weeknights">Weeknights</option>
+                                <option value="Weekends">Weekends</option>
+                                <option value="Flexible">Flexible</option>
+                            </select>
+                        </fieldset>
+
+                        <div class="form-group volunteer__fieldset">
+                            <label class="form-group__label form-group__label--required volunteer__checkbox" for="consent">
+                                <input id="consent" type="checkbox" name="Consent" value="Agreed" required>
+                                I agree to be contacted by LA Tech Community about volunteer opportunities.
+                            </label>
+                        </div>
+
+                        <div class="events__cta">
+                            <button type="submit" class="btn btn--primary">Submit Volunteer Interest</button>
+                        </div>
+                    </form>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2026 LA Tech Community. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="scripts/volunteer.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#00BFFF" stroke="#1A3A52" stroke-width="2"/>
+  
+  <!-- Left code bracket -->
+  <g stroke="#1A3A52" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M 18 16 L 12 32 L 18 48"/>
+  </g>
+  
+  <!-- Right code bracket -->
+  <g stroke="#FF9900" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M 46 16 L 52 32 L 46 48"/>
+  </g>
+  
+  <!-- Center "LA" text -->
+  <text x="32" y="37" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1A3A52">LA</text>
+</svg>

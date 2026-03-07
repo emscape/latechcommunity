@@ -1,0 +1,353 @@
+/* ===========================
+   RESPONSIVE
+   Media queries and adaptive layouts
+   =========================== */
+
+/* Breakpoints */
+/* Mobile: 320px-479px */
+/* Tablet: 480px-767px */
+/* Desktop: 768px+ */
+
+/* Tablet (480px and up) */
+@media (min-width: 480px) {
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero__title {
+        font-size: 56px;
+    }
+    
+    .section__title {
+        font-size: 32px;
+    }
+}
+
+/* Desktop / Large Tablets (768px and up) */
+@media (min-width: 768px) {
+    :root {
+        --container-padding: 2rem;
+        --font-size-base: 16px;
+    }
+    
+    h1 {
+        font-size: 52px;
+    }
+    
+    h2 {
+        font-size: 40px;
+    }
+    
+    h3 {
+        font-size: 28px;
+    }
+    
+    .hero__title {
+        font-size: 72px;
+    }
+    
+    .hero__subtitle {
+        font-size: 28px;
+    }
+    
+    .section__title {
+        font-size: 40px;
+    }
+    
+    .nav__toggle {
+        display: none;
+    }
+    
+    .nav__menu {
+        display: flex;
+        gap: var(--spacing-lg);
+    }
+    
+    .hero__container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-3xl);
+    }
+    
+    .values__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .community__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .chapters__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer__container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-2xl);
+    }
+}
+
+/* Large Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    :root {
+        --container-padding: 3rem;
+    }
+    
+    .hero__image {
+        min-height: 400px;
+    }
+}
+
+/* Extra Large Desktop (1280px and up) */
+@media (min-width: 1280px) {
+    :root {
+        --container-max-width: 1280px;
+    }
+}
+
+/* Mobile First Adjustments */
+
+/* Hide elements on mobile, show on desktop */
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none;
+    }
+    
+    .nav__toggle {
+        display: flex;
+    }
+    
+    .nav__menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--color-white);
+        border-bottom: 1px solid var(--color-light-bg);
+        padding: var(--spacing-md);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .nav__menu.active {
+        display: flex;
+    }
+    
+    .nav__link {
+        padding: var(--spacing-sm);
+        border-bottom: none;
+        border-left: 3px solid transparent;
+        padding-left: var(--spacing-md);
+    }
+    
+    .nav__link:hover,
+    .nav__link:focus {
+        border-left-color: var(--color-primary);
+        background-color: var(--color-light-bg);
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    h4 {
+        font-size: 16px;
+    }
+    
+    .hero__title {
+        font-size: 40px;
+    }
+    
+    .hero__subtitle {
+        font-size: 20px;
+    }
+    
+    .hero__container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .hero__image {
+        min-height: 250px;
+        order: -1;
+    }
+    
+    .section__title {
+        font-size: 28px;
+    }
+    
+    .section__description {
+        font-size: 16px;
+    }
+    
+    .values__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .community__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .social__links {
+        flex-direction: column;
+    }
+    
+    .social__links .btn {
+        width: 100%;
+    }
+    
+    .chapters__buttons {
+        flex-direction: column;
+    }
+    
+    .chapters__buttons .btn {
+        width: 100%;
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero__cta {
+        flex-direction: column;
+    }
+    
+    .hero__cta .btn {
+        width: 100%;
+    }
+    
+    .footer__container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .btn--sm {
+        width: auto;
+    }
+    
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .hero {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    code {
+        word-break: break-all;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .footer,
+    .nav__toggle,
+    .btn {
+        display: none;
+    }
+    
+    body {
+        color: #000;
+        background-color: #fff;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+    .btn--primary {
+        border: 2px solid var(--color-primary);
+    }
+    
+    .btn--secondary {
+        border: 2px solid var(--color-secondary);
+    }
+    
+    .card {
+        border-width: 2px;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* Dark Mode (Future Support) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-dark: #F5F5F5;
+        --color-white: #1A1A1A;
+        --color-light-bg: #2A2A2A;
+        --color-light-text: #B3B3B3;
+    }
+    
+    body {
+        background-color: var(--color-white);
+        color: var(--color-dark);
+    }
+}
+
+/* Device-Specific Optimizations */
+
+/* iPhone notch support */
+@supports (padding: max(0px)) {
+    body {
+        padding-left: max(0px, env(safe-area-inset-left));
+        padding-right: max(0px, env(safe-area-inset-right));
+        padding-top: max(0px, env(safe-area-inset-top));
+        padding-bottom: max(0px, env(safe-area-inset-bottom));
+    }
+}
+
+/* Touch-device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        min-height: 52px;
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+    
+    .nav__link {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+    
+    a {
+        padding: 4px 0;
+    }
+}
+
+/* Low motion preference */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

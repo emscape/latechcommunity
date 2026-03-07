@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LA Tech Community: Promote inclusive, accessible, community-driven technology education through events, workshops, mentorship, and open collaboration.">
+    <meta name="author" content="LA Tech Community">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://latechcommunity.org">
+    <meta property="og:title" content="LA Tech Community">
+    <meta property="og:description" content="Inclusive, accessible technology education for Los Angeles.">
+    <!-- <meta property="og:image" content="assets/og-image.png"> -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2300BFFF' stroke='%231A3A52' stroke-width='2'/%3E%3Cg stroke='%231A3A52' stroke-width='3' fill='none' stroke-linecap='round'%3E%3Cpath d='M 18 16 L 12 32 L 18 48'/%3E%3C/g%3E%3Cg stroke='%23FF9900' stroke-width='3' fill='none' stroke-linecap='round'%3E%3Cpath d='M 46 16 L 52 32 L 46 48'/%3E%3C/g%3E%3Ctext x='32' y='37' font-family='Arial, sans-serif' font-size='18' font-weight='bold' text-anchor='middle' fill='%231A3A52'%3ELA%3C/text%3E%3C/svg%3E">
+    <meta name="theme-color" content="#00BFFF">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    
+    <title>LA Tech Community | Inclusive Technology Education</title>
+</head>
+<body>
+    <!-- Skip to main content link (accessibility) -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="header__nav" role="navigation" aria-label="Primary Navigation">
+            <div class="header__container">
+                <a href="/" class="header__logo">
+                    <span class="header__logo-text">LA <span class="header__logo-accent">tech</span> community</span>
+                </a>
+                
+                <!-- Mobile menu toggle -->
+                <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav__toggle-icon"></span>
+                </button>
+                
+                <!-- Navigation menu -->
+                <ul class="nav__menu">
+                    <li><a href="#mission" class="nav__link">Mission</a></li>
+                    <li><a href="#values" class="nav__link">What We Do</a></li>
+                    <li><a href="#events" class="nav__link">Events</a></li>
+                    <li><a href="#community" class="nav__link">Community</a></li>
+                    <li><a href="#contact" class="nav__link">Get Involved</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main">
+        
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1 id="hero-title" class="hero__title">CODED <span class="hero__title-accent">IN LA</span></h1>
+                    <p class="hero__subtitle">Inclusive, accessible technology education for the LA community.</p>
+                    <p class="hero__description">
+                        We promote community-driven learning through events, workshops, mentorship, and open collaboration.
+                    </p>
+                    <button class="btn btn--primary" onclick="scrollTo('contact')">Get Started</button>
+                </div>
+                <div class="hero__image">
+                    <!-- Palm tree illustration placeholder -->
+                    <div class="hero__graphic"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mission Section -->
+        <section id="mission" class="section section--mission" aria-labelledby="mission-title">
+            <div class="section__container">
+                <h2 id="mission-title" class="section__title">Our Mission</h2>
+                <div class="mission__content">
+                    <p class="mission__text">
+                        LA Tech Community is organized exclusively for charitable and educational purposes under Section 501(c)(3) of the Internal Revenue Code.
+                    </p>
+                    <p class="mission__text">
+                        We believe technology education should be <strong>inclusive</strong>, <strong>accessible</strong>, and <strong>community-driven</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Values / What We Do Section -->
+        <section id="values" class="section section--values" aria-labelledby="values-title">
+            <div class="section__container">
+                <h2 id="values-title" class="section__title">What We Do</h2>
+                <div class="values__grid">
+                    
+                    <article class="card card--feature">
+                        <h3 class="card__title">Events & Workshops</h3>
+                        <p class="card__description">
+                            Hands-on learning experiences designed for all skill levels, from complete beginners to experienced developers.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--feature">
+                        <h3 class="card__title">Mentorship</h3>
+                        <p class="card__description">
+                            Connect with experienced technologists who guide your learning journey and career growth.
+                        </p>
+                    </article>
+                    
+                    <article class="card card--feature">
+                        <h3 class="card__title">Community & Collaboration</h3>
+                        <p class="card__description">
+                            Build relationships, share knowledge, and collaborate on projects with peers who share your passion.
+                        </p>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- Events Section -->
+        <section id="events" class="section section--light-bg" aria-labelledby="events-title">
+            <div class="section__container">
+                <h2 id="events-title" class="section__title">Upcoming Events</h2>
+                <p class="section__description">
+                    Join us for tech talks, workshops, hackathons, and community celebrations.
+                </p>
+                <div class="events__cta">
+                    <a href="https://gdg.community.dev/gdg-los-angeles/" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                        View GDG LA Events
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Community Section -->
+        <section id="community" class="section section--community" aria-labelledby="community-title">
+            <div class="section__container">
+                <h2 id="community-title" class="section__title section__title--dark">Join Our Community</h2>
+                <p class="section__description section__description--dark">
+                    Connect with 1,300+ developers, designers, and tech enthusiasts across Los Angeles.
+                </p>
+                <div class="community__grid">
+                    
+                    <article class="card card--highlight card--community">
+                        <h3 class="card__title">Slack Community</h3>
+                        <p class="card__description">
+                            Chat, collaborate, and network with fellow community members in real-time.
+                        </p>
+                        <a href="https://join.slack.com/t/gdggreaterla/shared_invite/zt-23hzfaoic-YnSmFcfk8LCjD7~iKVQhag" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary">
+                            Join Slack
+                        </a>
+                    </article>
+                    
+                    <article class="card card--highlight card--community">
+                        <h3 class="card__title">Follow Us</h3>
+                        <p class="card__description">
+                            Stay updated on the latest events, news, and opportunities.
+                        </p>
+                        <div class="social__links">
+                            <a href="https://www.instagram.com/gdg_losangeles" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary">
+                                Instagram
+                            </a>
+                            <a href="https://www.linkedin.com/company/gdg-greater-los-angeles/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary">
+                                LinkedIn
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="card card--highlight card--community">
+                        <h3 class="card__title">Related Chapters</h3>
+                        <p class="card__description">
+                            Connect with specialized groups across LA and SFV.
+                        </p>
+                        <div class="chapters__buttons">
+                            <a href="https://gdg.community.dev/gdg-culver-city/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary">
+                                GDG Culver City
+                            </a>
+                            <a href="https://gdg.community.dev/gdg-cloud-san-fernando-valley/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary">
+                                GDG Cloud SFV
+                            </a>
+                            <a href="https://gdg.community.dev/gdg-los-angeles-android/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary">
+                                GDG LA Android
+                            </a>
+                            <a href="https://gdg.community.dev/gdg-newport-beach/" target="_blank" rel="noopener noreferrer" class="btn btn--sm btn--primary">
+                                GDG Newport Beach
+                            </a>
+                        </div>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call-to-Action Section -->
+        <section id="contact" class="section section--cta" aria-labelledby="cta-title">
+            <div class="section__container">
+                <h2 id="cta-title" class="section__heading">Want to Get More Involved?</h2>
+                <p class="section__description">
+                    Volunteer, speak at an event, or help organize community activities. Reach out today.
+                </p>
+                <div class="cta__actions">
+                    <a href="volunteer.html" class="btn btn--secondary">Become a Volunteer</a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__container">
+            <div class="footer__section">
+                <h3 class="footer__heading">LA Tech Community</h3>
+                <p class="footer__description">Promoting inclusive, accessible technology education in Los Angeles.</p>
+                <p class="footer__legal">501(c)(3) Nonprofit Organization</p>
+                <p class="footer__community">Part of the GDG (Google Developer Groups) community ecosystem</p>
+            </div>
+            
+            <div class="footer__section">
+                <h4 class="footer__subheading">Quick Links</h4>
+                <ul class="footer__links">
+                    <li><a href="#mission">Our Mission</a></li>
+                    <li><a href="#values">What We Do</a></li>
+                    <li><a href="#contact">Get Involved</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__section">
+                <h4 class="footer__subheading">Connect</h4>
+                <ul class="footer__links">
+                    <li><a href="https://www.instagram.com/gdg_losangeles" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/company/gdg-greater-los-angeles/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://gdg.community.dev/gdg-los-angeles/" target="_blank" rel="noopener noreferrer">GDG Events</a></li>
+                    <li><a href="https://join.slack.com/t/gdggreaterla/shared_invite/zt-23hzfaoic-YnSmFcfk8LCjD7~iKVQhag" target="_blank" rel="noopener noreferrer">Slack</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer__bottom">
+            <p class="footer__copyright">&copy; 2026 LA Tech Community. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
