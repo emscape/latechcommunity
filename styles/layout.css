@@ -398,14 +398,14 @@
 }
 
 .footer__links a {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-primary);
     font-size: 14px;
     transition: color var(--transition-base);
 }
 
 .footer__links a:hover,
 .footer__links a:focus {
-    color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 .footer__bottom {
