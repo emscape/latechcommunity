@@ -54,3 +54,39 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Event photo gallery */
+.gallery {
+    margin: var(--spacing-lg) 0;
+}
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: var(--border-radius-lg);
+}
+
+.gallery__caption {
+    margin-top: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    text-align: center;
+    color: var(--color-light-text);
+}
+
+@media (max-width: 767px) {
+    .gallery__grid {
+        grid-template-columns: 1fr;
+    }
+}

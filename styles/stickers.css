@@ -1,0 +1,100 @@
+/* ===========================
+   STICKERS.CSS
+   Decorative brand stickers cut from the sticker sheet.
+   All are aria-hidden with empty alt text; they carry no content.
+   =========================== */
+
+.section__container,
+.hero__image {
+    position: relative;
+}
+
+.sticker {
+    position: absolute;
+    z-index: 1;
+    height: auto;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Hero: stickers slapped on the photo corners */
+.sticker--coded {
+    top: -18px;
+    right: -12px;
+    width: 200px;
+    transform: rotate(4deg);
+}
+
+.sticker--shield {
+    bottom: -24px;
+    left: -20px;
+    width: 96px;
+    transform: rotate(-10deg);
+}
+
+/* Section accents, placed in the margins beside centered content */
+.sticker--palm {
+    top: 0;
+    left: 0;
+    width: 160px;
+    transform: rotate(-8deg);
+}
+
+.sticker--surf {
+    top: -8px;
+    right: 0;
+    width: 200px;
+    transform: rotate(6deg);
+}
+
+.sticker--pier {
+    top: -12px;
+    left: 0;
+    width: 210px;
+    transform: rotate(-4deg);
+}
+
+.sticker--innovate {
+    top: -24px;
+    right: 0;
+    width: 140px;
+    transform: rotate(8deg);
+}
+
+.sticker--beach {
+    bottom: -16px;
+    right: 0;
+    width: 180px;
+    transform: rotate(-6deg);
+}
+
+/* Card icons in What We Do */
+.card__icon {
+    display: block;
+    width: 48px;
+    height: auto;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Section accents need side margin room; hide them on narrower screens */
+@media (max-width: 1179px) {
+    .sticker--palm,
+    .sticker--surf,
+    .sticker--pier,
+    .sticker--innovate,
+    .sticker--beach {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .sticker--coded {
+        width: 150px;
+        right: -4px;
+    }
+
+    .sticker--shield {
+        width: 72px;
+        left: -4px;
+    }
+}

@@ -261,17 +261,18 @@
 }
 
 /* Community Section */
+/* Literal white: dark mode redefines --color-white, but this background stays navy */
 .section.section--community {
     background: linear-gradient(180deg, #10283a 0%, #1A3A52 100%);
-    color: var(--color-white);
+    color: #FFFFFF;
 }
 
 .section--community .section__title--dark {
-    color: var(--color-white);
+    color: #FFFFFF;
 }
 
 .section.section--community .section__title {
-    color: var(--color-white);
+    color: #FFFFFF;
 }
 
 .section--community .section__description--dark {
@@ -339,9 +340,10 @@
 }
 
 /* Footer */
+/* Fixed navy/white in both color schemes (the theme variables invert in dark mode) */
 .footer {
-    background-color: var(--color-dark);
-    color: var(--color-white);
+    background-color: #1A3A52;
+    color: #FFFFFF;
     padding: var(--spacing-3xl) 0 var(--spacing-lg);
     margin-top: var(--spacing-3xl);
 }

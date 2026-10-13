@@ -42,8 +42,9 @@
         font-size: 28px;
     }
     
+    /* Scales with the two-column hero so "Community" fits its column */
     .hero__title {
-        font-size: 72px;
+        font-size: clamp(44px, 6.2vw, 72px);
     }
     
     .hero__subtitle {
