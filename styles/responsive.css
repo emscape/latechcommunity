@@ -92,10 +92,6 @@
     :root {
         --container-padding: 3rem;
     }
-    
-    .hero__image {
-        min-height: 400px;
-    }
 }
 
 /* Extra Large Desktop (1280px and up) */
@@ -178,7 +174,6 @@
     }
     
     .hero__image {
-        min-height: 250px;
         order: -1;
     }
     

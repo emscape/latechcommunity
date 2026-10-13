@@ -1,17 +1,7 @@
 /* ===========================
    ORGANIZATION.CSS
-   Hero brand image and organization details (EIN, address)
+   Organization details (EIN, address) and event photo gallery
    =========================== */
-
-/* Hero brand image replaces the former gradient placeholder box */
-.hero__graphic {
-    width: 100%;
-    height: auto;
-    max-width: 560px;
-    background: none;
-    opacity: 1;
-    border-radius: var(--border-radius-lg);
-}
 
 /* Organization details list */
 .org-details {
