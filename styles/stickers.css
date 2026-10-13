@@ -1,0 +1,117 @@
+/* ===========================
+   STICKERS.CSS
+   Decorative brand stickers cut from the sticker sheet.
+   Decorative only: <img> stickers use alt="" and aria-hidden, and the
+   section accents are CSS backgrounds.
+   =========================== */
+
+.section__container {
+    position: relative;
+}
+
+.sticker {
+    position: absolute;
+    z-index: 1;
+    height: auto;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Hero: stickers slapped on the photo corners */
+.sticker--coded {
+    top: -18px;
+    right: -12px;
+    width: 200px;
+    transform: rotate(4deg);
+}
+
+.sticker--shield {
+    bottom: -24px;
+    left: -20px;
+    width: 96px;
+    transform: rotate(-10deg);
+}
+
+/* Card stickers in What We Do (own element: .card__icon in components.css
+   styles glyph icons with a background tile) */
+.card__sticker {
+    display: block;
+    width: auto;
+    height: 48px;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Section accents, placed in the margins beside centered content.
+   Drawn as CSS backgrounds inside a min-width query so screens without
+   side room never download them (hidden <img> elements still load). */
+@media (min-width: 1280px) {
+    .section__container--palm::before,
+    .section__container--surf::before,
+    .section__container--pier::before,
+    .section__container--innovate::before,
+    .section__container--beach::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        background: no-repeat center / contain;
+        pointer-events: none;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    .section__container--palm::before {
+        top: 0;
+        left: var(--container-padding);
+        width: 160px;
+        aspect-ratio: 1;
+        background-image: url("../assets/stickers/palm-tree.png");
+        transform: rotate(-8deg);
+    }
+
+    .section__container--surf::before {
+        top: -8px;
+        right: var(--container-padding);
+        width: 200px;
+        aspect-ratio: 440 / 181;
+        background-image: url("../assets/stickers/sun-surf-software.png");
+        transform: rotate(6deg);
+    }
+
+    .section__container--pier::before {
+        top: -12px;
+        left: var(--container-padding);
+        width: 210px;
+        aspect-ratio: 412 / 169;
+        background-image: url("../assets/stickers/pier.png");
+        transform: rotate(-4deg);
+    }
+
+    .section__container--innovate::before {
+        top: -24px;
+        right: var(--container-padding);
+        width: 140px;
+        aspect-ratio: 1;
+        background-image: url("../assets/stickers/innovate.png");
+        transform: rotate(8deg);
+    }
+
+    .section__container--beach::before {
+        bottom: -16px;
+        right: var(--container-padding);
+        width: 180px;
+        aspect-ratio: 412 / 199;
+        background-image: url("../assets/stickers/beach.png");
+        transform: rotate(-6deg);
+    }
+}
+
+@media (max-width: 767px) {
+    .sticker--coded {
+        width: 150px;
+        right: -4px;
+    }
+
+    .sticker--shield {
+        width: 72px;
+        left: -4px;
+    }
+}

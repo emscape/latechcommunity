@@ -42,8 +42,9 @@
         font-size: 28px;
     }
     
+    /* Scales with the two-column hero so "Community" fits its column */
     .hero__title {
-        font-size: 72px;
+        font-size: clamp(44px, 6.2vw, 72px);
     }
     
     .hero__subtitle {
@@ -90,10 +91,6 @@
 @media (min-width: 1024px) {
     :root {
         --container-padding: 3rem;
-    }
-    
-    .hero__image {
-        min-height: 400px;
     }
 }
 
@@ -177,7 +174,6 @@
     }
     
     .hero__image {
-        min-height: 250px;
         order: -1;
     }
     

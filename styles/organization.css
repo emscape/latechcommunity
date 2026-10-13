@@ -1,17 +1,7 @@
 /* ===========================
    ORGANIZATION.CSS
-   Hero brand image and organization details (EIN, address)
+   Organization details (EIN, address) and event photo gallery
    =========================== */
-
-/* Hero brand image replaces the former gradient placeholder box */
-.hero__graphic {
-    width: 100%;
-    height: auto;
-    max-width: 560px;
-    background: none;
-    opacity: 1;
-    border-radius: var(--border-radius-lg);
-}
 
 /* Organization details list */
 .org-details {
@@ -51,6 +41,47 @@
 
 @media (max-width: 767px) {
     .org-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Event photo gallery */
+.gallery {
+    margin: var(--spacing-lg) 0;
+}
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cancel the global "ul li" bottom margin so row and column gaps match */
+.gallery__item {
+    margin: 0;
+}
+
+.gallery__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: var(--border-radius-lg);
+}
+
+.gallery__caption {
+    margin-top: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    text-align: center;
+    color: var(--color-light-text);
+}
+
+@media (max-width: 767px) {
+    .gallery__grid {
         grid-template-columns: 1fr;
     }
 }

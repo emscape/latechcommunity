@@ -176,19 +176,19 @@
     gap: var(--spacing-md);
 }
 
+/* Sized to the photo itself so the corner stickers anchor to it */
 .hero__image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px;
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    justify-self: center;
 }
 
 .hero__graphic {
+    display: block;
     width: 100%;
-    height: 280px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    height: auto;
     border-radius: var(--border-radius-lg);
-    opacity: 0.3;
 }
 
 /* Cards */
@@ -261,17 +261,18 @@
 }
 
 /* Community Section */
+/* Literal white: dark mode redefines --color-white, but this background stays navy */
 .section.section--community {
     background: linear-gradient(180deg, #10283a 0%, #1A3A52 100%);
-    color: var(--color-white);
+    color: #FFFFFF;
 }
 
 .section--community .section__title--dark {
-    color: var(--color-white);
+    color: #FFFFFF;
 }
 
 .section.section--community .section__title {
-    color: var(--color-white);
+    color: #FFFFFF;
 }
 
 .section--community .section__description--dark {
@@ -339,9 +340,10 @@
 }
 
 /* Footer */
+/* Fixed navy/white in both color schemes (the theme variables invert in dark mode) */
 .footer {
-    background-color: var(--color-dark);
-    color: var(--color-white);
+    background-color: #1A3A52;
+    color: #FFFFFF;
     padding: var(--spacing-3xl) 0 var(--spacing-lg);
     margin-top: var(--spacing-3xl);
 }
