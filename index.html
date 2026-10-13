@@ -5,26 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LA Tech Community: Promote inclusive, accessible, community-driven technology education through events, workshops, mentorship, and open collaboration.">
     <meta name="author" content="LA Tech Community">
-    
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://latechcommunity.org">
     <meta property="og:title" content="LA Tech Community">
     <meta property="og:description" content="Inclusive, accessible technology education for Los Angeles.">
     <!-- <meta property="og:image" content="assets/og-image.png"> -->
-    
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2300BFFF' stroke='%231A3A52' stroke-width='2'/%3E%3Cg stroke='%231A3A52' stroke-width='3' fill='none' stroke-linecap='round'%3E%3Cpath d='M 18 16 L 12 32 L 18 48'/%3E%3C/g%3E%3Cg stroke='%23FF9900' stroke-width='3' fill='none' stroke-linecap='round'%3E%3Cpath d='M 46 16 L 52 32 L 46 48'/%3E%3C/g%3E%3Ctext x='32' y='37' font-family='Arial, sans-serif' font-size='18' font-weight='bold' text-anchor='middle' fill='%231A3A52'%3ELA%3C/text%3E%3C/svg%3E">
     <meta name="theme-color" content="#00BFFF">
-    
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/typography.css">
     <link rel="stylesheet" href="styles/components.css">
     <link rel="stylesheet" href="styles/responsive.css">
-    
-    <title>LA Tech Community | Inclusive Technology Education</title>
+    <link rel="stylesheet" href="styles/organization.css">
+
+    <title>LA Tech Community | Los Angeles 501(c)(3) Nonprofit for Technology Education</title>
+
+    <!-- Structured data: organization identity for search engines and nonprofit verification -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "LA Tech Community",
+        "legalName": "LA Tech Community",
+        "url": "https://latechcommunity.org",
+        "taxID": "41-3032551",
+        "nonprofitStatus": "Nonprofit501c3",
+        "description": "LA Tech Community is a Los Angeles 501(c)(3) nonprofit that makes technology education inclusive, accessible, and community-driven through workshops, tech talks, mentorship, and community events.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "7777 W 91st Street",
+            "addressLocality": "Playa Del Rey",
+            "addressRegion": "CA",
+            "postalCode": "90293",
+            "addressCountry": "US"
+        },
+        "areaServed": "Los Angeles, California"
+    }
+    </script>
 </head>
 <body>
     <!-- Skip to main content link (accessibility) -->
@@ -49,6 +70,7 @@
                     <li><a href="#values" class="nav__link">What We Do</a></li>
                     <li><a href="#events" class="nav__link">Events</a></li>
                     <li><a href="#community" class="nav__link">Community</a></li>
+                    <li><a href="#about" class="nav__link">About</a></li>
                     <li><a href="#contact" class="nav__link">Get Involved</a></li>
                 </ul>
             </div>
@@ -62,16 +84,15 @@
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero__container">
                 <div class="hero__content">
-                    <h1 id="hero-title" class="hero__title">CODED <span class="hero__title-accent">IN LA</span></h1>
-                    <p class="hero__subtitle">Inclusive, accessible technology education for the LA community.</p>
+                    <h1 id="hero-title" class="hero__title">LA <span class="hero__title-accent">Tech</span> Community</h1>
+                    <p class="hero__subtitle">Coded in LA: inclusive, accessible technology education for Los Angeles.</p>
                     <p class="hero__description">
-                        We promote community-driven learning through events, workshops, mentorship, and open collaboration.
+                        A 501(c)(3) nonprofit organization offering workshops, tech talks, mentorship, and community events for learners and technologists at every skill level.
                     </p>
                     <button class="btn btn--primary" onclick="scrollTo('contact')">Get Started</button>
                 </div>
                 <div class="hero__image">
-                    <!-- Palm tree illustration placeholder -->
-                    <div class="hero__graphic"></div>
+                    <img class="hero__graphic" src="assets/brand-grapic.png" width="1400" height="1000" alt="LA Tech Community brand stickers: the LA tech community logo, Coded in LA lettering, a circuit-board palm tree, an LA Tech highway shield, and Sun, Surf, Software artwork.">
                 </div>
             </div>
         </section>
@@ -82,10 +103,13 @@
                 <h2 id="mission-title" class="section__title">Our Mission</h2>
                 <div class="mission__content">
                     <p class="mission__text">
-                        LA Tech Community is organized exclusively for charitable and educational purposes under Section 501(c)(3) of the Internal Revenue Code.
+                        LA Tech Community's mission is to make technology education <strong>inclusive</strong>, <strong>accessible</strong>, and <strong>community-driven</strong> for people across Los Angeles.
                     </p>
                     <p class="mission__text">
-                        We believe technology education should be <strong>inclusive</strong>, <strong>accessible</strong>, and <strong>community-driven</strong>.
+                        We run hands-on workshops and tech talks, connect learners with volunteer mentors, and host community events where people of every background and skill level can build technical skills, share knowledge, and grow their careers in technology.
+                    </p>
+                    <p class="mission__text">
+                        LA Tech Community is a nonprofit organization organized exclusively for charitable and educational purposes under Section 501(c)(3) of the Internal Revenue Code.
                     </p>
                 </div>
             </div>
@@ -96,28 +120,24 @@
             <div class="section__container">
                 <h2 id="values-title" class="section__title">What We Do</h2>
                 <div class="values__grid">
-                    
                     <article class="card card--feature">
                         <h3 class="card__title">Events & Workshops</h3>
                         <p class="card__description">
                             Hands-on learning experiences designed for all skill levels, from complete beginners to experienced developers.
                         </p>
                     </article>
-                    
                     <article class="card card--feature">
                         <h3 class="card__title">Mentorship</h3>
                         <p class="card__description">
                             Connect with experienced technologists who guide your learning journey and career growth.
                         </p>
                     </article>
-                    
                     <article class="card card--feature">
                         <h3 class="card__title">Community & Collaboration</h3>
                         <p class="card__description">
                             Build relationships, share knowledge, and collaborate on projects with peers who share your passion.
                         </p>
                     </article>
-                    
                 </div>
             </div>
         </section>
@@ -145,7 +165,6 @@
                     Connect with 1,300+ developers, designers, and tech enthusiasts across Los Angeles.
                 </p>
                 <div class="community__grid">
-                    
                     <article class="card card--highlight card--community">
                         <h3 class="card__title">Slack Community</h3>
                         <p class="card__description">
@@ -155,7 +174,6 @@
                             Join Slack
                         </a>
                     </article>
-                    
                     <article class="card card--highlight card--community">
                         <h3 class="card__title">Follow Us</h3>
                         <p class="card__description">
@@ -170,7 +188,6 @@
                             </a>
                         </div>
                     </article>
-                    
                     <article class="card card--highlight card--community">
                         <h3 class="card__title">Related Chapters</h3>
                         <p class="card__description">
@@ -191,11 +208,37 @@
                             </a>
                         </div>
                     </article>
-                    
                 </div>
             </div>
         </section>
         
+        <!-- About / Organization Details Section -->
+        <section id="about" class="section section--light-bg" aria-labelledby="about-title">
+            <div class="section__container">
+                <h2 id="about-title" class="section__title">About the Organization</h2>
+                <dl class="org-details">
+                    <div class="org-details__item">
+                        <dt class="org-details__term">Organization Name</dt>
+                        <dd class="org-details__value">LA Tech Community</dd>
+                    </div>
+                    <div class="org-details__item">
+                        <dt class="org-details__term">Tax Status</dt>
+                        <dd class="org-details__value">501(c)(3) public charity; donations are tax-deductible</dd>
+                    </div>
+                    <div class="org-details__item">
+                        <dt class="org-details__term">EIN / Charity ID</dt>
+                        <dd class="org-details__value">41-3032551</dd>
+                    </div>
+                    <div class="org-details__item">
+                        <dt class="org-details__term">Address</dt>
+                        <dd class="org-details__value">
+                            <address class="org-details__address">7777 W 91st Street<br>Playa Del Rey, CA 90293<br>United States</address>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
         <!-- Call-to-Action Section -->
         <section id="contact" class="section section--cta" aria-labelledby="cta-title">
             <div class="section__container">
@@ -217,7 +260,8 @@
             <div class="footer__section">
                 <h3 class="footer__heading">LA Tech Community</h3>
                 <p class="footer__description">Promoting inclusive, accessible technology education in Los Angeles.</p>
-                <p class="footer__legal">501(c)(3) Nonprofit Organization | EIN: 41-3032551 | 7777 W 91st Street, Playa Vista, CA 90293</p>                <p class="footer__community">Part of the GDG (Google Developer Groups) community ecosystem</p>
+                <p class="footer__legal">501(c)(3) Nonprofit Organization | EIN: 41-3032551 | 7777 W 91st Street, Playa Del Rey, CA 90293</p>
+                <p class="footer__community">Part of the GDG (Google Developer Groups) community ecosystem</p>
             </div>
             
             <div class="footer__section">
@@ -225,6 +269,7 @@
                 <ul class="footer__links">
                     <li><a href="#mission">Our Mission</a></li>
                     <li><a href="#values">What We Do</a></li>
+                    <li><a href="#about">About the Organization</a></li>
                     <li><a href="#contact">Get Involved</a></li>
                 </ul>
             </div>
