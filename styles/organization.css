@@ -69,6 +69,11 @@
     padding: 0;
 }
 
+/* Cancel the global "ul li" bottom margin so row and column gaps match */
+.gallery__item {
+    margin: 0;
+}
+
 .gallery__image {
     display: block;
     width: 100%;
