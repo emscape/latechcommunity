@@ -176,19 +176,13 @@
     gap: var(--spacing-md);
 }
 
-/* Sized to the photo itself so the corner stickers anchor to it */
+/* Sized to the video itself so the corner stickers anchor to it
+   (video styles in hero-video.css) */
 .hero__image {
     position: relative;
     width: 100%;
     max-width: 560px;
     justify-self: center;
-}
-
-.hero__graphic {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius-lg);
 }
 
 /* Cards */
