@@ -1,0 +1,61 @@
+/* ===========================
+   HERO-VIDEO.CSS
+   Muted DevFest highlights loop in the hero, with a pause/play toggle
+   (WCAG 2.2.2: motion longer than 5 seconds must be pausable).
+   =========================== */
+
+.hero__video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    background-color: var(--color-dark);
+}
+
+/* Bottom-right corner: the shield sticker holds bottom-left */
+.hero__video-toggle {
+    position: absolute;
+    right: var(--spacing-sm);
+    bottom: var(--spacing-sm);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    cursor: pointer;
+}
+
+.hero__video-toggle[hidden] {
+    display: none;
+}
+
+.hero__video-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hero__video-toggle:focus-visible {
+    outline: 2px solid #00BFFF;
+    outline-offset: 2px;
+}
+
+.hero__video-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Show the icon for the action the button will take */
+.hero__video-icon--play,
+.hero__video-toggle--paused .hero__video-icon--pause {
+    display: none;
+}
+
+.hero__video-toggle--paused .hero__video-icon--play {
+    display: block;
+}

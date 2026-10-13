@@ -73,6 +73,17 @@
     border-radius: var(--border-radius-lg);
 }
 
+/* Full-width banner above the 3x2 grid; cropped wide, weighted toward
+   the crowd rather than the ceiling */
+.gallery__item--feature {
+    grid-column: 1 / -1;
+}
+
+.gallery__item--feature .gallery__image {
+    aspect-ratio: 12 / 5;
+    object-position: center 70%;
+}
+
 .gallery__caption {
     margin-top: var(--spacing-sm);
     font-size: var(--font-size-sm);
@@ -83,5 +94,10 @@
 @media (max-width: 767px) {
     .gallery__grid {
         grid-template-columns: 1fr;
+    }
+
+    /* A wide crop is too short at phone width; match the other photos */
+    .gallery__item--feature .gallery__image {
+        aspect-ratio: 3 / 2;
     }
 }

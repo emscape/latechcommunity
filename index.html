@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="styles/responsive.css">
     <link rel="stylesheet" href="styles/organization.css">
     <link rel="stylesheet" href="styles/stickers.css">
+    <link rel="stylesheet" href="styles/hero-video.css">
     <title>LA Tech Community | Los Angeles 501(c)(3) Nonprofit for Technology Education</title>
     <!-- Structured data: organization identity for search engines and nonprofit verification -->
     <script type="application/ld+json">
@@ -86,7 +87,13 @@
                     <button class="btn btn--primary" onclick="scrollTo('contact')">Get Started</button>
                 </div>
                 <div class="hero__image">
-                    <img class="hero__graphic" src="assets/images/devfest-2025/main-hall-1200.jpg" srcset="assets/images/devfest-2025/main-hall-600.jpg 600w, assets/images/devfest-2025/main-hall-1200.jpg 1200w" sizes="(min-width: 1120px) 560px, (min-width: 768px) 50vw, (min-width: 560px) 560px, 100vw" width="1200" height="800" alt="A packed conference hall of attendees at LA Tech Community's DevFest 2025">
+                    <video class="hero__video" muted loop playsinline preload="none" poster="assets/video/devfest-2025-poster.jpg" width="1280" height="720" aria-label="DevFest 2025 highlights: volunteers, attendees and speakers at LA Tech Community's conference">
+                        <source src="assets/video/devfest-2025-highlights.mp4" type="video/mp4">
+                    </video>
+                    <button type="button" class="hero__video-toggle" aria-label="Pause video" hidden>
+                        <svg class="hero__video-icon hero__video-icon--pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+                        <svg class="hero__video-icon hero__video-icon--play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 4l13 8-13 8z"/></svg>
+                    </button>
                     <img class="sticker sticker--coded" src="assets/stickers/coded-in-la.png" width="440" height="138" alt="" aria-hidden="true">
                     <img class="sticker sticker--shield" src="assets/stickers/la-tech-shield.png" width="209" height="212" alt="" aria-hidden="true">
                 </div>
@@ -147,6 +154,7 @@
                 </p>
                 <figure class="gallery">
                     <ul class="gallery__grid">
+                    <li class="gallery__item gallery__item--feature"><img class="gallery__image" src="assets/images/devfest-2025/main-hall-1200.jpg" srcset="assets/images/devfest-2025/main-hall-600.jpg 600w, assets/images/devfest-2025/main-hall-1200.jpg 1200w" sizes="100vw" width="1200" height="800" loading="lazy" decoding="async" alt="A packed conference hall of attendees at LA Tech Community's DevFest 2025"></li>
                     <li class="gallery__item"><img class="gallery__image" src="assets/images/devfest-2025/registration-600.jpg" srcset="assets/images/devfest-2025/registration-600.jpg 600w, assets/images/devfest-2025/registration-1200.jpg 1200w" sizes="(min-width: 768px) 33vw, 100vw" width="600" height="400" loading="lazy" decoding="async" alt="Attendees lining up at the DevFest 2025 registration table"></li>
                     <li class="gallery__item"><img class="gallery__image" src="assets/images/devfest-2025/speaker-keynote-600.jpg" srcset="assets/images/devfest-2025/speaker-keynote-600.jpg 600w, assets/images/devfest-2025/speaker-keynote-1200.jpg 1200w" sizes="(min-width: 768px) 33vw, 100vw" width="600" height="400" loading="lazy" decoding="async" alt="A speaker wearing a headset microphone gestures while presenting on stage"></li>
                     <li class="gallery__item"><img class="gallery__image" src="assets/images/devfest-2025/attendees-laptops-600.jpg" srcset="assets/images/devfest-2025/attendees-laptops-600.jpg 600w, assets/images/devfest-2025/attendees-laptops-1200.jpg 1200w" sizes="(min-width: 768px) 33vw, 100vw" width="600" height="400" loading="lazy" decoding="async" alt="Two attendees smile while working together on their laptops"></li>
@@ -284,5 +292,6 @@
     </footer>
     <!-- Scripts -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/hero-video.js"></script>
 </body>
 </html>
