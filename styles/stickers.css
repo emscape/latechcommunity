@@ -32,8 +32,9 @@
     transform: rotate(-10deg);
 }
 
-/* Card icons in What We Do */
-.card__icon {
+/* Card stickers in What We Do (own element: .card__icon in components.css
+   styles glyph icons with a background tile) */
+.card__sticker {
     display: block;
     width: auto;
     height: 48px;
