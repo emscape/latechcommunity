@@ -35,7 +35,11 @@
     color: var(--color-white);
 }
 
+/* Text and border colors are restated so the global a:hover rule
+   (orange text, blue underline) doesn't leak onto <a> buttons */
 .btn--primary:hover {
+    color: var(--color-white);
+    border-color: transparent;
     background-color: #0099CC;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
@@ -56,6 +60,8 @@
 }
 
 .btn--secondary:hover {
+    color: var(--color-dark);
+    border-color: transparent;
     background-color: #FF8800;
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
