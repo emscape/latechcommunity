@@ -277,11 +277,14 @@
 
 /* High Contrast Mode Support */
 @media (prefers-contrast: more) {
-    .btn--primary {
+    /* :hover listed so the hover rules' border-color reset can't win */
+    .btn--primary,
+    .btn--primary:hover {
         border: 2px solid var(--color-primary);
     }
     
-    .btn--secondary {
+    .btn--secondary,
+    .btn--secondary:hover {
         border: 2px solid var(--color-secondary);
     }
     
