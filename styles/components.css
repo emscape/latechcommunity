@@ -50,17 +50,19 @@
 }
 
 /* Secondary Button */
+/* Fixed navy text in both color schemes: --color-dark inverts to near-white
+   in dark mode, which fails contrast on orange (1.96:1 vs 5.54:1 for navy) */
 .btn--secondary {
     background-color: var(--color-secondary);
-    color: var(--color-dark);
+    color: #1A3A52;
 }
 
 .btn--secondary:visited {
-    color: var(--color-dark);
+    color: #1A3A52;
 }
 
 .btn--secondary:hover {
-    color: var(--color-dark);
+    color: #1A3A52;
     border-color: transparent;
     background-color: #FF8800;
     transform: translateY(-2px);
@@ -124,7 +126,7 @@
 
 .badge--secondary {
     background-color: var(--color-secondary);
-    color: var(--color-dark);
+    color: #1A3A52;
 }
 
 /* Alert Component */
@@ -362,7 +364,7 @@
 
 .tag--secondary {
     background-color: var(--color-secondary);
-    color: var(--color-dark);
+    color: #1A3A52;
 }
 
 /* Divider */
