@@ -59,29 +59,6 @@ function closeMenu() {
 }
 
 /**
- * Smooth scroll to sections (accessible)
- * @param {string} sectionId - The ID of the section to scroll to
- */
-function scrollTo(sectionId) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-        // Close mobile menu if open
-        closeMenu();
-        
-        // Scroll to element with smooth behavior
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        
-        // Optional: Focus the section for keyboard users
-        element.focus({ preventScroll: true });
-    }
-}
-
-/**
- * Make scrollTo globally available for onclick handlers
- */
-window.scrollTo = scrollTo;
-
-/**
  * Handle keyboard accessibility for buttons
  */
 function initKeyboardAccessibility() {
@@ -202,7 +179,6 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         toggleMenu,
         closeMenu,
-        scrollTo,
         validateForm,
         setMenuState
     };
