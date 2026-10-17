@@ -10,8 +10,12 @@ latechcommunity/
 ├── .github/
 │   └── instructions/          # File-specific instructions
 ├── assets/                    # Graphics and images
-├── src/                       # Source code (HTML, CSS, JS)
 ├── docs/                      # Project documentation
+├── scripts/                   # JavaScript
+├── styles/                    # CSS modules (BEM)
+├── index.html                 # Pages are served from the repo root
+├── volunteer.html
+├── thank-you.html
 ├── PROJECT_PROGRESS.md        # Milestone tracking
 ├── DESIGN_NOTES.md            # Design decisions
 └── copilot-instructions.md    # Workspace instructions
@@ -21,7 +25,7 @@ latechcommunity/
 
 1. **Review the Design**: Add your graphic to `/assets/` and review the design guide
 2. **Set Up**: Examine `DESIGN_NOTES.md` for brand guidelines
-3. **Build**: Create HTML, CSS, and JavaScript in `/src/`
+3. **Build**: Pages live at the repo root, with CSS in `/styles/` and JavaScript in `/scripts/`
 4. **Track Progress**: Update `PROJECT_PROGRESS.md` as you complete tasks
 
 ## Team References
