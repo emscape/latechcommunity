@@ -99,7 +99,7 @@
 }
 
 .header__logo-accent {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
 }
 
 /* Navigation Menu */
@@ -228,7 +228,7 @@
 }
 
 .mission__text strong {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
     font-weight: var(--font-weight-bold);
 }
 

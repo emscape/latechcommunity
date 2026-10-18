@@ -7,6 +7,9 @@
 :root {
     /* Colors */
     --color-primary: #00BFFF;
+    /* Brand blue darkened for text on light backgrounds: #00BFFF is 2.12:1 on
+       white, this is 5.14:1 on white and 4.72:1 on --color-light-bg (WCAG AA) */
+    --color-primary-text: #00769E;
     --color-secondary: #FF9900;
     --color-dark: #1A3A52;
     --color-white: #FFFFFF;
@@ -91,7 +94,7 @@ p {
 }
 
 a {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
     text-decoration: none;
     transition: color var(--transition-fast);
 }
@@ -137,7 +140,7 @@ ul, ol {
     position: absolute;
     top: -40px;
     left: 0;
-    background: var(--color-primary);
+    background: var(--color-primary-text);
     color: var(--color-white);
     padding: var(--spacing-sm);
     z-index: 100;
