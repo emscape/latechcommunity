@@ -117,6 +117,14 @@
     transition: border-color var(--transition-base);
 }
 
+/* Text color restated so the generic a:visited/a:hover rules (link blue,
+   orange at 2.14:1 on white) don't apply; only the underline changes */
+.nav__link:visited,
+.nav__link:hover,
+.nav__link:focus {
+    color: var(--color-dark);
+}
+
 .nav__link:hover,
 .nav__link:focus {
     border-bottom-color: var(--color-primary);
