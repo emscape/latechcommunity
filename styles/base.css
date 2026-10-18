@@ -150,6 +150,14 @@ ul, ol {
     top: 0;
 }
 
+/* Text color restated so the generic a:hover (orange) and a:visited
+   (#00769E, same as the background) rules don't apply */
+.skip-link:visited,
+.skip-link:hover,
+.skip-link:focus {
+    color: var(--color-white);
+}
+
 /* Accessibility: Reduce Motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
     *,

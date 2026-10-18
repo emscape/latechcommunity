@@ -92,6 +92,14 @@
     white-space: nowrap;
 }
 
+/* Restated so the generic a:visited/a:hover rules (link blue, orange at
+   2.14:1 on white) don't recolor the logo text */
+.header__logo:visited,
+.header__logo:hover,
+.header__logo:focus {
+    color: var(--color-dark);
+}
+
 .header__logo:focus {
     outline: 2px solid var(--color-primary);
     outline-offset: 4px;
