@@ -304,6 +304,7 @@
         --color-white: #1A1A1A;
         --color-light-bg: #2A2A2A;
         --color-light-text: #B3B3B3;
+        --color-primary-text: #00BFFF;
     }
     
     body {

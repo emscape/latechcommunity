@@ -64,7 +64,7 @@ h6 {
 }
 
 .hero__title-accent {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
 }
 
 .hero__subtitle {
@@ -130,7 +130,7 @@ p {
 /* Text Emphasis */
 strong {
     font-weight: var(--font-weight-bold);
-    color: var(--color-primary);
+    color: var(--color-primary-text);
 }
 
 em {
@@ -149,19 +149,19 @@ code {
 
 /* Link Styles */
 a {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color var(--transition-base), color var(--transition-base);
 }
 
 a:hover {
-    border-bottom-color: var(--color-primary);
-    color: var(--color-secondary);
+    border-bottom-color: var(--color-primary-text);
+    color: var(--color-dark);
 }
 
 a:visited {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
 }
 
 /* Small Text */
@@ -219,7 +219,7 @@ ul li::marker {
 }
 
 .text--primary {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
 }
 
 .text--secondary {

@@ -92,6 +92,14 @@
     white-space: nowrap;
 }
 
+/* Restated so the generic a:visited/a:hover rules (link blue, orange at
+   2.14:1 on white) don't recolor the logo text */
+.header__logo:visited,
+.header__logo:hover,
+.header__logo:focus {
+    color: var(--color-dark);
+}
+
 .header__logo:focus {
     outline: 2px solid var(--color-primary);
     outline-offset: 4px;
@@ -99,7 +107,7 @@
 }
 
 .header__logo-accent {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
 }
 
 /* Navigation Menu */
@@ -115,6 +123,14 @@
     padding: var(--spacing-xs) 0;
     border-bottom: 2px solid transparent;
     transition: border-color var(--transition-base);
+}
+
+/* Text color restated so the generic a:visited/a:hover rules (link blue,
+   orange at 2.14:1 on white) don't apply; only the underline changes */
+.nav__link:visited,
+.nav__link:hover,
+.nav__link:focus {
+    color: var(--color-dark);
 }
 
 .nav__link:hover,
@@ -228,7 +244,7 @@
 }
 
 .mission__text strong {
-    color: var(--color-primary);
+    color: var(--color-primary-text);
     font-weight: var(--font-weight-bold);
 }
 
@@ -398,9 +414,16 @@
     transition: color var(--transition-base);
 }
 
+/* Restated so the generic a:visited/a:hover rules in typography.css (dark
+   text blue, 2.31:1 on navy) don't win on equal specificity */
+.footer__links a:visited {
+    color: var(--color-primary);
+}
+
 .footer__links a:hover,
 .footer__links a:focus {
     color: var(--color-secondary);
+    border-bottom-color: var(--color-primary);
 }
 
 .footer__bottom {
