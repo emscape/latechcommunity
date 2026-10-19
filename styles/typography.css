@@ -157,7 +157,7 @@ a {
 
 a:hover {
     border-bottom-color: var(--color-primary-text);
-    color: var(--color-secondary);
+    color: var(--color-dark);
 }
 
 a:visited {
