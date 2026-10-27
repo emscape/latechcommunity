@@ -52,19 +52,17 @@ h6 {
     color: var(--color-dark);
 }
 
-/* Hero Title (Special Display) */
+/* Hero Title: the logo image, with the org name as its alt text */
 .hero__title {
-    font-size: 72px;
-    font-family: var(--font-family-display);
-    font-style: italic;
-    font-weight: 900;
-    line-height: var(--line-height-tight);
-    color: var(--color-dark);
     margin-bottom: var(--spacing-lg);
 }
 
-.hero__title-accent {
-    color: var(--color-primary-text);
+/* Capped at the PNG's natural width so it never upscales */
+.hero__logo {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    height: auto;
 }
 
 .hero__subtitle {
