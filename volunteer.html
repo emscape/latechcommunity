@@ -6,7 +6,7 @@
     <meta name="description" content="Volunteer with LA Tech Community. Tell us how you want to help and how to contact you.">
     <meta name="author" content="LA Tech Community">
 
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2300BFFF' stroke='%231A3A52' stroke-width='2'/%3E%3Cg stroke='%231A3A52' stroke-width='3' fill='none' stroke-linecap='round'%3E%3Cpath d='M 18 16 L 12 32 L 18 48'/%3E%3C/g%3E%3Cg stroke='%23FF9900' stroke-width='3' fill='none' stroke-linecap='round'%3E%3Cpath d='M 46 16 L 52 32 L 46 48'/%3E%3C/g%3E%3Ctext x='32' y='37' font-family='Arial, sans-serif' font-size='18' font-weight='bold' text-anchor='middle' fill='%231A3A52'%3ELA%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
@@ -25,6 +25,12 @@
                 <a href="index.html" class="header__logo">
                     <span class="header__logo-text">LA <span class="header__logo-accent">Tech</span> Community</span>
                 </a>
+                <!-- Mobile menu toggle -->
+                <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav__toggle-icon"></span>
+                    <span class="nav__toggle-icon"></span>
+                    <span class="nav__toggle-icon"></span>
+                </button>
                 <ul class="nav__menu">
                     <li><a href="index.html#mission" class="nav__link">Mission</a></li>
                     <li><a href="index.html#values" class="nav__link">What We Do</a></li>
@@ -120,6 +126,7 @@
             <p class="footer__copyright">&copy; 2026 LA Tech Community. All rights reserved.</p>
         </div>
     </footer>
+    <script src="scripts/main.js"></script>
     <script src="scripts/volunteer.js"></script>
 </body>
 </html>

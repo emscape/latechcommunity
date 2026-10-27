@@ -110,11 +110,17 @@
     color: var(--color-primary-text);
 }
 
-/* Navigation Menu */
+/* Navigation Menu. Margins zeroed so the global ul/li spacing in
+   typography.css doesn't push the menu above the logo's center line */
 .nav__menu {
     display: flex;
     gap: var(--spacing-lg);
     align-items: center;
+    margin: 0;
+}
+
+.nav__menu li {
+    margin-bottom: 0;
 }
 
 .nav__link {
@@ -138,10 +144,12 @@
     border-bottom-color: var(--color-primary);
 }
 
-/* Mobile Navigation Toggle */
+/* Mobile Navigation Toggle: three 2px bars spaced 8px apart, which
+   turn into an X while the menu is open */
 .nav__toggle {
     display: none;
     flex-direction: column;
+    justify-content: center;
     width: 28px;
     height: 24px;
     padding: 0;
@@ -154,19 +162,19 @@
     height: 2px;
     background-color: var(--color-dark);
     transition: all var(--transition-base);
-    margin: 4px 0;
+    margin: 3px 0;
 }
 
-.nav__toggle[aria-expanded=\"true\"] .nav__toggle-icon:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
+.nav__toggle[aria-expanded="true"] .nav__toggle-icon:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
 }
 
-.nav__toggle[aria-expanded=\"true\"] .nav__toggle-icon:nth-child(2) {
+.nav__toggle[aria-expanded="true"] .nav__toggle-icon:nth-child(2) {
     opacity: 0;
 }
 
-.nav__toggle[aria-expanded=\"true\"] .nav__toggle-icon:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+.nav__toggle[aria-expanded="true"] .nav__toggle-icon:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Hero Section */

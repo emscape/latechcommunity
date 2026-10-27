@@ -136,26 +136,30 @@ ul, ol {
 }
 
 /* Utility Classes */
+/* Moved up by its own height rather than a fixed offset, so no edge
+   shows at the top of the page when the text wraps or the font is larger */
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: 0;
     left: 0;
-    background: var(--color-primary-text);
-    color: var(--color-white);
+    transform: translateY(-100%);
+    background: var(--color-white);
+    color: var(--color-dark);
+    border: 2px solid var(--color-primary);
     padding: var(--spacing-sm);
     z-index: 100;
 }
 
 .skip-link:focus {
-    top: 0;
+    transform: translateY(0);
 }
 
-/* Text color restated so the generic a:hover (orange) and a:visited
-   (#00769E, same as the background) rules don't apply */
+/* Text color restated so the generic a:visited and a:hover rules don't
+   recolor it */
 .skip-link:visited,
 .skip-link:hover,
 .skip-link:focus {
-    color: var(--color-white);
+    color: var(--color-dark);
 }
 
 /* Accessibility: Reduce Motion for users who prefer it */

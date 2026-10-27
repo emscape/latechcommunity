@@ -14,10 +14,6 @@
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .hero__title {
-        font-size: 56px;
-    }
-    
     .section__title {
         font-size: 32px;
     }
@@ -42,26 +38,12 @@
         font-size: 28px;
     }
     
-    /* Scales with the two-column hero so "Community" fits its column */
-    .hero__title {
-        font-size: clamp(44px, 6.2vw, 72px);
-    }
-    
     .hero__subtitle {
         font-size: 28px;
     }
     
     .section__title {
         font-size: 40px;
-    }
-    
-    .nav__toggle {
-        display: none;
-    }
-    
-    .nav__menu {
-        display: flex;
-        gap: var(--spacing-lg);
     }
     
     .hero__container {
@@ -101,14 +83,10 @@
     }
 }
 
-/* Mobile First Adjustments */
-
-/* Hide elements on mobile, show on desktop */
-@media (max-width: 767px) {
-    .hide-mobile {
-        display: none;
-    }
-    
+/* Collapsed navigation (below 1024px). The six nav labels plus the logo
+   need about 1000px on one line; narrower widths wrapped labels like
+   "What We Do" onto two lines, so the menu button covers tablets too */
+@media (max-width: 1023px) {
     .nav__toggle {
         display: flex;
     }
@@ -120,6 +98,7 @@
         left: 0;
         right: 0;
         flex-direction: column;
+        align-items: stretch;
         gap: 0;
         background-color: var(--color-white);
         border-bottom: 1px solid var(--color-light-bg);
@@ -132,6 +111,7 @@
     }
     
     .nav__link {
+        display: block;
         padding: var(--spacing-sm);
         border-bottom: none;
         border-left: 3px solid transparent;
@@ -142,6 +122,15 @@
     .nav__link:focus {
         border-left-color: var(--color-primary);
         background-color: var(--color-light-bg);
+    }
+}
+
+/* Mobile First Adjustments */
+
+/* Hide elements on mobile, show on desktop */
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none;
     }
     
     h1 {
@@ -158,10 +147,6 @@
     
     h4 {
         font-size: 16px;
-    }
-    
-    .hero__title {
-        font-size: 40px;
     }
     
     .hero__subtitle {
