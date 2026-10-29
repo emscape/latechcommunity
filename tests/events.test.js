@@ -1,8 +1,10 @@
 import { createRequire } from 'node:module';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 
 const require = createRequire(import.meta.url);
-const { selectEvents, formatEventDate, formatAudience, truncate } = require('../scripts/events.js');
+const {
+    selectEvents, formatEventDate, formatAudience, truncate, fetchChapterEvents, FETCH_TIMEOUT_MS,
+} = require('../scripts/events.js');
 
 const NOW = new Date('2026-10-29T12:00:00Z');
 
@@ -101,5 +103,25 @@ describe('truncate', () => {
 
     it('cuts long text at a word boundary and adds an ellipsis', () => {
         expect(truncate('one two three four five', 12)).toBe('one two…');
+    });
+});
+
+describe('fetchChapterEvents', () => {
+    afterEach(() => {
+        vi.useRealTimers();
+        vi.unstubAllGlobals();
+    });
+
+    it('aborts a request that stalls past the timeout', async () => {
+        vi.useFakeTimers();
+        // A fetch that never answers on its own, only rejects when aborted
+        vi.stubGlobal('fetch', vi.fn((url, { signal }) => new Promise((resolve, reject) => {
+            signal.addEventListener('abort', () => reject(new Error('aborted')));
+        })));
+
+        const request = fetchChapterEvents(1032);
+        const assertion = expect(request).rejects.toThrow('aborted');
+        await vi.advanceTimersByTimeAsync(FETCH_TIMEOUT_MS);
+        await assertion;
     });
 });

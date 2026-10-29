@@ -98,13 +98,18 @@ async function fetchChapterEvents(chapterId) {
         order: 'start_date',
         page_size: '50',
     });
-    const options = typeof AbortSignal.timeout === 'function'
-        ? { signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) }
-        : {};
-    const response = await fetch(`${EVENTS_API}${chapterId}/?${params}`, options);
-    if (!response.ok) throw new Error(`Chapter ${chapterId}: HTTP ${response.status}`);
-    const data = await response.json();
-    return Array.isArray(data.results) ? data.results : [];
+    // AbortController + setTimeout rather than AbortSignal.timeout(), which
+    // older Safari lacks; a stalled request must not leave the section loading
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+    try {
+        const response = await fetch(`${EVENTS_API}${chapterId}/?${params}`, { signal: controller.signal });
+        if (!response.ok) throw new Error(`Chapter ${chapterId}: HTTP ${response.status}`);
+        const data = await response.json();
+        return Array.isArray(data.results) ? data.results : [];
+    } finally {
+        clearTimeout(timer);
+    }
 }
 
 /**
@@ -181,7 +186,7 @@ async function initEvents() {
 }
 
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { selectEvents, formatEventDate, formatAudience, truncate, isEventUrl };
+    module.exports = { selectEvents, formatEventDate, formatAudience, truncate, isEventUrl, fetchChapterEvents, FETCH_TIMEOUT_MS };
 } else if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initEvents);
 } else {
