@@ -1,0 +1,11 @@
+{
+  "name": "latechcommunity",
+  "private": true,
+  "description": "Static site for latechcommunity.org. Node is only used to run tests.",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  }
+}
