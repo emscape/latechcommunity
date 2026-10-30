@@ -1,0 +1,89 @@
+/* ===========================
+   EVENTS
+   Upcoming chapter event cards, filled in by scripts/events.js
+   =========================== */
+
+.events__upcoming {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.events__heading {
+    text-align: center;
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-lg);
+}
+
+.events__status {
+    text-align: center;
+    color: var(--color-light-text);
+}
+
+.events__list {
+    display: grid;
+    /* Fit as many columns as the width allows (up to 3 in the container)
+       and center them, so a short list doesn't leave empty slots */
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 360px));
+    justify-content: center;
+    gap: var(--spacing-lg);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* The hidden attribute alone loses to display: grid above */
+.events__list[hidden] {
+    display: none;
+}
+
+.events__item {
+    display: flex;
+}
+
+.event-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    width: 100%;
+    padding: var(--spacing-lg);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-light-bg);
+    border-top: 4px solid var(--color-primary);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.event-card__title {
+    color: var(--color-dark);
+    font-size: 18px;
+    margin: 0;
+}
+
+.event-card__date {
+    color: var(--color-primary-text);
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-sm);
+}
+
+.event-card__meta {
+    color: var(--color-light-text);
+    font-size: var(--font-size-sm);
+    margin: 0;
+}
+
+.event-card__description {
+    color: var(--color-light-text);
+    font-size: 14px;
+    line-height: var(--line-height-relaxed);
+    margin: var(--spacing-xs) 0 0;
+}
+
+/* Pin the button to the bottom so buttons line up across a row */
+.event-card__rsvp {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Space above the button, whichever element precedes it */
+.event-card > :nth-last-child(2) {
+    margin-bottom: var(--spacing-md);
+}
